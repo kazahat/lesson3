@@ -26,6 +26,7 @@ color = random.choice(['blue', 'green', 'red', 'yellow', 'purple', 'orange'])
 
 running = True
 tire_count = 0
+tire_count2 = 0
 while running:
     screen.fill(color)
     for event in pygame.event.get():
@@ -39,6 +40,7 @@ while running:
                 target_x = random.randint(0, SCREEN_WIDTH - target_width)
                 target_y = random.randint(0, SCREEN_HEIGHT - target_height)
             else:
+                tire_count2 += 1
                 target_x = random.randint(0, SCREEN_WIDTH - target_width)
                 target_y = random.randint(0, SCREEN_HEIGHT - target_height)
     screen.blit(target_image, (target_x, target_y))
@@ -49,3 +51,4 @@ while running:
 
 pygame.quit()
 print(f"Вы попали в мишень {tire_count} раз")
+print(f"Вы попали мимо мишени {tire_count2} раз")
