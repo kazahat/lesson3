@@ -20,10 +20,7 @@ target_x = random.randint(0, SCREEN_WIDTH - target_width)
 target_y = random.randint(0, SCREEN_HEIGHT - target_height)
 color = random.choice(['blue', 'green', 'red', 'yellow', 'purple', 'orange'])
 
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+
 
 
 running = True
